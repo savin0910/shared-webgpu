@@ -3,7 +3,7 @@ const canvas = document.querySelector("canvas");
 canvas.width = canvas.offsetWidth * devicePixelRatio;
 canvas.height = canvas.offsetHeight * devicePixelRatio;
 
-const worker = new SharedWorker(new URL("./worker.js", import.meta.url), {
+const worker = new SharedWorker(new URL("./webgpu-worker.js", import.meta.url), {
   type: "module",
 });
 const offscreen = canvas.transferControlToOffscreen();
